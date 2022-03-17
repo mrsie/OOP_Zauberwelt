@@ -1,4 +1,4 @@
-import random
+import random  # Packet zum generieren von Zufallszahlen
 
 
 # Oberklasse Charaktertyp
@@ -16,18 +16,12 @@ class Charaktertyp:
         self.kleidung = []
         self.ausruestung = []
         Charaktertyp.anz_char += 1
-
-    def regeneration(self):
-        if self.leben + 100 < self.leben_max:
-            self.leben += 100
-        else:
-            self.leben = self.leben_max
-        if self.ausdauer + 100 < self.ausdauer_max:
-            self.ausdauer += 100
-        else:
-            self.ausdauer = self.ausdauer_max
+        print(self.name, "erscheint im Spiel an Position", self.position)
 
     def laufen(self):
+        pass
+
+    def regeneration(self):
         pass
 
 
@@ -37,20 +31,18 @@ class Magier(Charaktertyp):
         super().__init__(name, 1500, 1000)  # Konstruktor der Oberklasse
         self.magicka_max = 1500
         self.magicka = 1500
-        print(name, "erscheint im Spiel an Position", self.position)
 
-    def regeneration(self):
-        super().regeneration()
-        if self.magicka + 100 < self.magicka_max:
-            self.magicka += 100
-        else:
-            self.magicka = self.magicka_max
-
-    def heilen(self, mitspieler):
-        if mitspieler.leben + 300 < self.leben_max:
+    def heilen(self):
+        if self.leben + 300 < self.leben_max:
             self.leben += 300
         else:
             self.leben = self.leben_max
 
+    def verzaubern(self):
+        pass
+
 
 magier1 = Magier("Gandalf")
+# magier1.leben = 1000
+# magier1.heilen()
+# print(magier1.leben)
