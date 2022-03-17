@@ -35,5 +35,5 @@ magier1 = Magier("Gandalf")
 # print(magier1.leben)
 
 # 1. Aufgabe:
-# Erstelle eine Unterklasse Ritter der Oberklasse Charaktertyp
+# Implementiere die Unterklasse Ritter der Oberklasse Charaktertyp
 # Ein Ritter soll standardmäßig ein maximales Leben von 2000 und eine maximale Ausdauer von 1800 haben.
