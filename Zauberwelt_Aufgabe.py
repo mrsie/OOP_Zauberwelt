@@ -18,12 +18,6 @@ class Charaktertyp:
         Charaktertyp.anz_char += 1
         print(self.name, "erscheint im Spiel an Position", self.position)
 
-    def laufen(self):
-        pass
-
-    def regeneration(self):
-        pass
-
 
 # Unterklasse Magier der Oberklasse Charaktertyp
 class Magier(Charaktertyp):
@@ -38,11 +32,12 @@ class Magier(Charaktertyp):
         else:
             self.leben = self.leben_max
 
-    def verzaubern(self):
-        pass
-
 
 magier1 = Magier("Gandalf")
 # magier1.leben = 1000
 # magier1.heilen()
 # print(magier1.leben)
+
+# 1. Aufgabe:
+# Erstelle eine Unterklasse Ritter der Oberklasse Charaktertyp
+# Ein Ritter soll standardmäßig ein maximales Leben von 2000 und eine maximale Ausdauer von 1800 haben.
