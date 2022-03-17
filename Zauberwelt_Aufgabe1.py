@@ -1,6 +1,3 @@
-import random  # Packet zum generieren von Zufallszahlen
-
-
 # Oberklasse Charaktertyp
 class Charaktertyp:
     anz_char = 0  # Klassen-Variable zum Zählen der Charaktere
@@ -8,7 +5,6 @@ class Charaktertyp:
     def __init__(self, name, leben_max, ausdauer_max):
         self.name = name
         self.gold = 0
-        self.position = random.randint(0, 100)  # Positioniert den Charakter an einer zufälligen Position.
         self.leben = leben_max
         self.leben_max = leben_max
         self.ausdauer = ausdauer_max
@@ -16,7 +12,7 @@ class Charaktertyp:
         self.kleidung = []
         self.ausruestung = []
         Charaktertyp.anz_char += 1
-        print(self.name, "erscheint im Spiel an Position", self.position)
+        print(self.name, "erscheint im Spiel.")
 
 
 # Unterklasse Magier der Oberklasse Charaktertyp
